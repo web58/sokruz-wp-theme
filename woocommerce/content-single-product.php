@@ -188,10 +188,10 @@ global $product;
                       <ul class="list-reset product-layers__list accordion">
                         <?php foreach($layers as $layer): ?>
                           <li class="accordion__item layer-item">
-                            <button class="accordion__control layer-item__title"><?=$layer['title']?></button>
+                            <button class="accordion__control layer-item__title"><?=$layer['layers-term']->name?></button>
                             <div class="accordion__content layer-item__content">
                               <p class="indent-reset">
-                              <?=$layer['descr']?>
+                                <?=$layer['layers-term']->description?>
                               </p>
                             </div>
                           </li>
