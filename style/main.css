@@ -3192,7 +3192,11 @@ input[type=checkbox].visually-hidden {
   .product-layers__content {
     display: flex;
     flex-direction: row-reverse;
+    justify-content: space-between;
     align-items: flex-start;
+  }
+  .product-layers__list {
+    flex-grow: 1;
   }
 }
 

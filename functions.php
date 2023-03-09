@@ -19,7 +19,7 @@ define( 'USER_SETTINGS', array(
 ) );
 
 function get_style() {
-  $ver = '?v=1.0.0';
+  $ver = '?v=1.0.1';
   wp_enqueue_style('style', THEME_PATH );
   wp_enqueue_style( 'vendor', THEME_PATH.'/style/vendor-bundle.css' );
   wp_enqueue_style( 'main', THEME_PATH.'/style/main.css'.$ver );
