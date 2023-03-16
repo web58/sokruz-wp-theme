@@ -4,7 +4,7 @@
   query_posts(
     array_merge(
       $wp_query->query,
-      array('post_type'=>'product'),
+      array('post_type'=>'product', 'posts_per_page' => -1),
       )
     );
     $count_results = $wp_query->post_count;
