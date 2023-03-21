@@ -10,7 +10,7 @@
         <p class="indent-reset hd hd--h1 modal__title">Спасибо за заявку!</p>
         <p class="modal__send-text">Наш менеджер свяжется с вами в ближайшее время для уточнения подробностей.</p>
         <div class="modal__bottom-field">
-          <button class="btn-reset btn btn--outlined" type="submit" data-hystclose>Хорошо</button>
+          <button class="btn-reset btn btn--outlined" type="button" data-hystclose>Хорошо</button>
         </div>
       </div>
     </div>

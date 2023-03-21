@@ -10,7 +10,7 @@
         <p class="indent-reset hd hd--h1 modal__title">Ошибка!</p>
         <p class="modal__send-text">Возникла непредвиденная ошибка, отправка не удалась. Попробуйте отправить запрос позднее.</p>
         <div class="modal__bottom-field">
-          <button class="btn-reset btn btn--outlined" type="submit" data-hystclose>Закрыть</button>
+          <button class="btn-reset btn btn--outlined" type="button" data-hystclose>Закрыть</button>
         </div>
       </div>
     </div>
