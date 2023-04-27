@@ -97,7 +97,7 @@
           </div>
         </header>
 
-      <div class="container">
+        <div class="container">
           <div class="action-products__slider slider">
             <ul class="list-reset swiper-wrapper slider__wrapper">
               <?php foreach($action_products as $item): ?>
