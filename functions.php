@@ -336,7 +336,7 @@ function add_youtube_html ( $atts ) {
 
 function send_mail() {
 	$headers = array(
-	  'From: Tour Pay <info@'.$_SERVER['HTTP_HOST'].'>',
+	  'From: Socruz <info@'.$_SERVER['HTTP_HOST'].'>',
 	  'content-type: text/html',
 	);
 
