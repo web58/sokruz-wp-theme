@@ -11,15 +11,19 @@
       <div class="actions-tabs__top">
         <div class="container">
           <ul class="list-reset actions-tabs__nav" data-tabs="nav">
-            <li><button class="btn-reset hd hd--h2 actions-tabs__nav-btn" type="button" data-tabs="btn">Складская программа</button></li>
-            <li><button class="btn-reset hd hd--h2 actions-tabs__nav-btn" type="button" data-tabs="btn">Временные</button></li>
-            <li><button class="btn-reset hd hd--h2 actions-tabs__nav-btn" type="button" data-tabs="btn">Коллекция тканей</button></li>
+            <li><button class="btn-reset hd hd--h4 actions-tabs__nav-btn" type="button" data-tabs="btn">Мебель по акции</button></li>
+            <li><button class="btn-reset hd hd--h4 actions-tabs__nav-btn" type="button" data-tabs="btn">Матрасы по акции</button></li>
+            <li><button class="btn-reset hd hd--h4 actions-tabs__nav-btn" type="button" data-tabs="btn">Временные</button></li>
+            <li><button class="btn-reset hd hd--h4 actions-tabs__nav-btn" type="button" data-tabs="btn">Коллекция тканей</button></li>
           </ul>
         </div>
       </div>
       <div class="container">
         <div data-tabs="panel">
-          <?php get_template_part('/template-parts/sale-products'); ?>
+          <?php get_template_part('/template-parts/action-furniture'); ?>
+        </div>
+        <div data-tabs="panel">
+          <?php get_template_part('/template-parts/action-mattress'); ?>
         </div>
         <div data-tabs="panel">
           <?php
