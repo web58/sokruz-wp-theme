@@ -49,36 +49,36 @@
     </div>
   </section>
   <section class="about-advantages">
-    <h2 class="visually-hidden">Наши преимущества</h2>
     <div class="container">
-    <?php $about_advantages = get_field('about_advantages'); ?>
-      <?php if($about_advantages) : ?>
-        <ul class="list-reset about-advantages__list">
-          <?php foreach ($about_advantages as $item) : ?>
-            <?php
-            $icon = $item['icon']['sizes']['thumbnail'];
-            $title = $item['title'];
-            $text = $item['text'];
-            ?>
-            <li class="about-advantages-item">
-              <?php if ($icon) :?><img class="about-advantages-item__icon" src="<?=$icon?>" width="60" height="60" alt="" aria-hidden="true"><?php endif; ?>
-              <?php if ($title) :?><h3 class="indent-reset hd hd--h2 about-advantages-item__title"><?=$title?></h3><?php endif; ?>
-              <?php if ($text) :?><div class="about-advantages-item__text"><?=$text?></div><?php endif; ?>
-            </li>
-          <?php endforeach; ?>
-        </ul>
-      <?php endif; ?>
-      <p class="indent-reset about-advantages__resume-text">В этом разделе Вы можете самостоятельно получить оптовый прайс-лист на нашу продукцию, пройдя регистрацию для партнеров.</p>
-      <div class="decor-block decor-block--second">
-        <img class="decor-block__img" src="<?=THEME_PATH;?>/img/decor-img-2.jpg" alt="" aria-hidden="true">
-        <div class="decor-block__content decor-block__content--second">
-          <h2 class="indent-reset hd hd--h1 decor-block__title">Приглашаем к сотрудничеству</h2>
-          <div class="decor-block__text">
-            <p>Вы – владелец оптового магазина или розничной точки? Приглашаем вас к сотрудничеству с фабрикой Сокруз! Предоставляем скидки постоянным партнерам, отправляем рекламные материалы для выставочного зала.</p>
+      <h2 class="hd hd--h1">Наши преимущества</h2>
+      <?php $about_advantages = get_field('about_advantages'); ?>
+        <?php if($about_advantages) : ?>
+          <ul class="list-reset about-advantages__list">
+            <?php foreach ($about_advantages as $item) : ?>
+              <?php
+              $icon = $item['icon']['sizes']['thumbnail'];
+              $title = $item['title'];
+              $text = $item['text'];
+              ?>
+              <li class="about-advantages-item">
+                <?php if ($icon) :?><img class="about-advantages-item__icon" src="<?=$icon?>" width="60" height="60" alt="" aria-hidden="true"><?php endif; ?>
+                <?php if ($title) :?><h3 class="indent-reset hd hd--h2 about-advantages-item__title"><?=$title?></h3><?php endif; ?>
+                <?php if ($text) :?><div class="about-advantages-item__text"><?=$text?></div><?php endif; ?>
+              </li>
+            <?php endforeach; ?>
+          </ul>
+        <?php endif; ?>
+        <p class="indent-reset about-advantages__resume-text">В этом разделе Вы можете самостоятельно получить оптовый прайс-лист на нашу продукцию, пройдя регистрацию для партнеров.</p>
+        <div class="decor-block decor-block--second">
+          <img class="decor-block__img" src="<?=THEME_PATH;?>/img/decor-img-2.jpg" alt="" aria-hidden="true">
+          <div class="decor-block__content decor-block__content--second">
+            <h2 class="indent-reset hd hd--h1 decor-block__title">Приглашаем к сотрудничеству</h2>
+            <div class="decor-block__text">
+              <p>Вы – владелец оптового магазина или розничной точки? Приглашаем вас к сотрудничеству с фабрикой Сокруз! Предоставляем скидки постоянным партнерам, отправляем рекламные материалы для выставочного зала.</p>
+            </div>
+            <a class="btn decor-block__link" href="/partnership">Начать сотрудничество</a>
           </div>
-          <a class="btn decor-block__link" href="/partnership">Начать сотрудничество</a>
         </div>
-      </div>
     </div>
   </section>
 </main>
