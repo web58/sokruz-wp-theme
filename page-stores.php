@@ -33,7 +33,7 @@
             <?php wp_reset_postdata(); ?>
             <div class="store-item">
               <img class="store-item__image" src="<?=THEME_PATH?>/img/online-store.jpg" alt="">
-              <p class="indent-reset hd hd--h3 store-item__title"><a class="store-item__link" href="<?=ONLINE_STORE_LINK;?>" target="_blank" rel="nofollow noreferer noopener">Интернет-магазин</a></p>
+              <p class="indent-reset hd hd--h3 store-item__title"><span>Скоро онлайн</span><a class="store-item__link is-hidden" href="<?=ONLINE_STORE_LINK;?>" target="_blank" rel="nofollow noreferer noopener">Интернет-магазин</a></p>
             </div>
           </div>
         </div>
