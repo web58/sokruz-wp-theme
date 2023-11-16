@@ -11,7 +11,7 @@
         <div class="container">
         <?php
           $pages = get_pages( [
-            'sort_order'   => 'ASC',
+            'sort_order'   => 'DESC',
             'sort_column'  => 'post_title',
             'child_of'     => get_the_ID(),
             'post_type'    => 'page',
