@@ -4787,13 +4787,59 @@ input[type=checkbox].visually-hidden {
   border-bottom: 1px solid var(--gray80);
 }
 .materials-item__image {
-  padding: 10px;
+  position: relative;
+
+  height: 210px;
+  overflow: hidden;
 
   border-bottom: 1px solid var(--gray80);
 }
 .materials-item__image img {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+
   display: block;
-  margin: 0 auto;
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.materials-item__transform {
+  position: relative;
+
+  cursor: pointer;
+}
+.materials-item__transform::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+
+  width: 48px;
+  height: 48px;
+
+  background-image: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M41.0297 6.97045C31.5783 -2.38845 16.3296 -2.31354 6.97069 7.13785C-2.32324 16.5236 -2.32324 31.6438 6.97069 41.0296C16.4221 50.3885 31.6708 50.3135 41.0297 40.8622C50.3236 31.4764 50.3236 16.3562 41.0297 6.97045ZM24.0002 46.1484C11.7874 46.1484 1.85178 36.2128 1.85178 24C1.85178 11.7871 11.7873 1.85165 24.0002 1.85165C36.213 1.85165 46.1486 11.7872 46.1486 24.0001C46.1486 36.2129 36.2129 46.1484 24.0002 46.1484Z' fill='%23E4332C'/%3E%3Cpath d='M37.0557 23.1621V23.1632L17.5017 11.8739C17.039 11.6067 16.4471 11.7653 16.1799 12.2282C16.0951 12.3752 16.0503 12.5418 16.0503 12.7116V35.29C16.0505 35.8244 16.484 36.2575 17.0184 36.2572C17.1881 36.2571 17.3549 36.2124 17.5018 36.1275L37.0559 24.8383C37.5187 24.5712 37.6774 23.9793 37.4103 23.5165C37.3252 23.3693 37.2031 23.2471 37.0557 23.1621Z' fill='%23E4332C'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+
+  transition: -webkit-transform 0.15s ease-in-out;
+  transition:         transform 0.15s ease-in-out;
+  transition:         transform 0.15s ease-in-out, -webkit-transform 0.15s ease-in-out;
+}
+.materials-item__transform img:nth-child(2) {
+  display: none;
+}
+.materials-item__transform.is-played::after {
+  opacity: 0;
+}
+.materials-item__transform:hover::after {
+  -webkit-transform: translate(-50%, -50%) scale(1.2);
+          transform: translate(-50%, -50%) scale(1.2);
 }
 .materials-item__descr {
   padding: 16px;
@@ -4838,6 +4884,8 @@ input[type=checkbox].visually-hidden {
     grid-column: span 12;
   }
   .materials-item__image {
+    height: auto;
+
     grid-column: 8/span 5;
     grid-row-start: 2;
   }

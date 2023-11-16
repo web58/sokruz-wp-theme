@@ -11,3 +11,4 @@ import './modules/calc-mattress.js';
 import './modules/accordions.js';
 import './modules/gallery.js';
 import './modules/yt-video.js';
+import './modules/transform-mech.js';

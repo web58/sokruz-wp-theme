@@ -16,27 +16,30 @@ define( 'USER_SETTINGS', array(
   'AJAX_URL' => admin_url( 'admin-ajax.php?action=send_mail' ),
 ) );
 
+if ( ! defined( '_S_VERSION' ) ) {
+	define( '_S_VERSION', '1.0.2' );
+}
+
 function get_style() {
-  $ver = '?v=1.0.1';
-  wp_enqueue_style('style', THEME_PATH );
-  wp_enqueue_style( 'vendor', THEME_PATH.'/style/vendor-bundle.css' );
-  wp_enqueue_style( 'main', THEME_PATH.'/style/main.css'.$ver );
-  // wp_enqueue_style( 'custom', THEME_PATH.'/style/custom.css'.$ver );
+  $ver = '?v=1.0.2';
+  wp_enqueue_style('style', THEME_PATH.'/style.css' );
+  wp_enqueue_style( 'vendor-styles', THEME_PATH.'/style/vendor-bundle.css', null, _S_VERSION, 'all');
+  wp_enqueue_style( 'main-styles', THEME_PATH.'/style/main.css', null, _S_VERSION, 'all');
+  // wp_enqueue_style( 'custom-styles', THEME_PATH.'/style/custom.css', null, _S_VERSION, 'all');
 
   wp_deregister_style( 'woocommerce-general' );
 	wp_deregister_style( 'woocommerce-layout' );
 }
 
 function get_scripts() {
-  $ver = '?v=1.0.0';
-  wp_deregister_script('jquery');
-  wp_enqueue_script( 'vendor', THEME_PATH.'/js/vendor-bundle.js', null, null, false);
-  wp_enqueue_script( 'main', THEME_PATH.'/js/main.js'.$ver, null, null, false);
-  wp_localize_script( 'vendor', 'WP_Options', USER_SETTINGS );
+  // wp_deregister_script('jquery');
+  wp_enqueue_script( 'vendor-scripts', THEME_PATH.'/js/vendor-bundle.js', null, _S_VERSION, true);
+  wp_enqueue_script( 'main-scripts', THEME_PATH.'/js/main.js', null, _S_VERSION, true);
+  wp_localize_script( 'vendor-scripts', 'WP_Options', USER_SETTINGS );
 }
 
 function add_type_es6_module( $tag, $handle, $src ) {
-  if ( 'main' === $handle ) {
+  if ( 'main-scripts' === $handle ) {
     return str_replace( '<script ', '<script type="module"', $tag );
   }
   return $tag;
@@ -522,7 +525,7 @@ add_action('wp_ajax_send_mail', 'send_mail');
 add_action('wp_ajax_nopriv_send_mail', 'send_mail');
 // add_action( 'do_robotstxt', 'my_robotstxt' );
 
-add_filter( 'wp_default_scripts', 'remove_jquery_migrate' );
+// add_filter( 'wp_default_scripts', 'remove_jquery_migrate' );
 add_filter( 'script_loader_tag', 'add_type_es6_module', 10, 3 );
 add_filter( 'site_transient_update_plugins', 'filter_plugin_updates' );
 add_filter( 'woocommerce_placeholder_img_src', 'custom_woocommerce_placeholder_img_src' );

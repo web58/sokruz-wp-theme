@@ -16,12 +16,19 @@
             <?php foreach ($transform_types as $type) : ?>
               <li class="materials-item">
                 <p class="indent-reset hd hd--h3 materials-item__title"><?=$type['title']?></p>
-                <div class="materials-item__image">
-                  <img
-                    src="<?=get_image_url_fallback( $type['image']['url'] );?>"
-                    width="<?=$type['image']['width'];?>"
-                    height="<?=$type['image']['height'];?>"
-                    alt="<?=$type['image']['alt'];?>">
+                <div class="materials-item__image<?php if ($type['image'] && $type['image_gif']) : ?> materials-item__transform<?php endif; ?>">
+                  <?php if ($type['image'] && $type['image_gif']) : ?>
+                    <img
+                      src="<?=$type['image']['url'];?>"
+                      alt="<?=$type['image']['alt'];?>">
+                    <img
+                      src="<?=$type['image_gif']['url'];?>"
+                      alt="<?=$type['image']['alt'];?>">
+                    <?php else: ?>
+                      <img
+                        src="<?=get_image_url_fallback( $type['image']['url'] );?>"
+                        alt="<?=$type['image']['alt'];?>">
+                  <?php endif; ?>
                 </div>
                 <div class="materials-item__descr">
                   <?=$type['text'];?>
