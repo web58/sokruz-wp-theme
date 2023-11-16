@@ -8,7 +8,7 @@
     </div>
     <div class="partnership-top">
       <div class="container">
-        <img class="partnership-top__img" src="<?=THEME_PATH?>/img/partnership/cover.jpg" alt="">
+        <?php if ( get_the_post_thumbnail_url() ) : ?><img class="partnership-top__img" src="<?=get_the_post_thumbnail_url();?>" alt=""><?php endif; ?>
         <div class="partnership-top__descr">
           <p class="indent-reset hd hd--h3 partnership-top__tagline">Фабрика мягкой мебели «СОКРУЗ» рада предложить Вам мягкую мебель оптом по сниженным ценам!</p>
           <div class="partnership-top__text">
