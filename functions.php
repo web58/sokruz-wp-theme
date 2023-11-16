@@ -522,7 +522,7 @@ add_action( 'after_setup_theme', 'theme_register_menus' );
 add_action( 'init', 'create_post_types' );
 add_action('wp_ajax_send_mail', 'send_mail');
 add_action('wp_ajax_nopriv_send_mail', 'send_mail');
-add_action( 'do_robotstxt', 'my_robotstxt' );
+// add_action( 'do_robotstxt', 'my_robotstxt' );
 
 add_filter( 'wp_default_scripts', 'remove_jquery_migrate' );
 add_filter( 'script_loader_tag', 'add_type_es6_module', 10, 3 );
