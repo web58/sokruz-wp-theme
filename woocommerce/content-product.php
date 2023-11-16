@@ -54,8 +54,6 @@ if ( empty( $product ) || ! $product->is_visible() ) {
       <?php $price_from = get_field('price_from'); ?>
       <?php if ($product->get_price()) : ?>
         <span class="hd hd--h3 product-card__price"><?php if ($price_from):?>от <?php endif; ?><?= $product->get_price() ?> &#8381;</span>
-      <?php else: ?>
-        <span class="hd hd--h4 product-card__price">Цена не указана</span>
       <?php endif; ?>
     </div>
     <?php if ( has_term('', 'product_tag') ) : ?>
