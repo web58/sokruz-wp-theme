@@ -19,9 +19,11 @@
           <li class="help-content__list-item help-item">
             <?php get_template_part('/template-parts/help-contents/help','care'); ?>
           </li>
+          <?php if(COMPANY_CATALOGS):?>
           <li class="help-content__list-item help-item">
             <?php get_template_part('/template-parts/help-contents/help','downloads'); ?>
           </li>
+          <?php endif; ?>
         </ol>
       </div>
     </div>

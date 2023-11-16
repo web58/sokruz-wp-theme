@@ -31,15 +31,18 @@
           <?php get_template_part('/template-parts/menu/menu-footer', 'catalog'); ?>
           <?php get_template_part('/template-parts/menu/menu-footer', 'about'); ?>
           <?php get_template_part('/template-parts/menu/menu-footer', 'help'); ?>
+          <?php if(COMPANY_CATALOGS):?>
           <ul class="list-reset footer-nav__menu">
             <li>
-              <span>Запросить каталоги</span>
+              <span>Скачать каталоги</span>
               <ul>
-                <li><a href="<?=CATALOG_MATTRESS_LINK ? CATALOG_MATTRESS_LINK : '#'; ?>" download>Мягкая мебель</a></li>
-                <li><a href="<?=CATALOG_FURNITURE_LINK ? CATALOG_MATTRESS_LINK : '#'; ?>" download>Кровати и матрасы</a></li>
+                <?php foreach(COMPANY_CATALOGS as $catalog): if($catalog['title'] && $catalog['file']): ?>
+                <li><a href="<?= $catalog['file']; ?>" download><?= $catalog['title']; ?></a></li>
+                <?php endif; endforeach; ?>
               </ul>
             </li>
           </ul>
+          <?php endif; ?>
         </div>
       </nav>
 

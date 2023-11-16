@@ -81,18 +81,13 @@
     <h2 class="visually-hidden">Полезная информация</h2>
     <div class="container">
       <ul class="list-reset partnership-info__list">
+        <?php if(COMPANY_CATALOGS): foreach(COMPANY_CATALOGS as $catalog): if($catalog['title'] && $catalog['file']): ?>
+        <?php $cover_src = $catalog['cover'] ? $catalog['cover'] : THEME_PATH . '/img/partnership/catalog-default.jpg'; ?>
         <li class="partnership-info__item">
-          <img class="partnership-info__img" src="<?=THEME_PATH?>/img/partnership/catalog-cab.jpg" alt="" aria-hidden="true">
-          <a class="hd hd--h3 partnership-info__link partnership-info__link--arrow" href="<?=CATALOG_FURNITURE_CAB_LINK ? CATALOG_FURNITURE_CAB_LINK : '#'; ?>" download>Каталог корпусной мебели</a>
+          <img class="partnership-info__img" src="<?= $cover_src; ?>" alt="" aria-hidden="true">
+          <a class="hd hd--h3 partnership-info__link partnership-info__link--arrow" href="<?= $catalog['file']; ?>" download>Каталог «<?= $catalog['title']; ?>»</a>
         </li>
-        <li class="partnership-info__item">
-          <img class="partnership-info__img" src="<?=THEME_PATH?>/img/partnership/catalog-mattress.jpg" alt="" aria-hidden="true">
-          <a class="hd hd--h3 partnership-info__link partnership-info__link--arrow" href="<?=CATALOG_MATTRESS_LINK ? CATALOG_MATTRESS_LINK : '#'; ?>" download>Каталог матрасов</a>
-        </li>
-        <li class="partnership-info__item">
-          <img class="partnership-info__img" src="<?=THEME_PATH?>/img/partnership/catalog-furniture.jpg" alt="" aria-hidden="true">
-          <a class="hd hd--h3 partnership-info__link partnership-info__link--arrow" href="<?=CATALOG_FURNITURE_LINK ? CATALOG_FURNITURE_LINK : '#'; ?>" download>Каталог мягкой мебели</a>
-        </li>
+        <?php endif; endforeach; endif; ?>
         <li class="partnership-info__item">
           <img class="partnership-info__img" src="<?=THEME_PATH?>/img/partnership/call-price.jpg" alt="" aria-hidden="true">
           <button class="btn-reset hd hd--h3 partnership-info__link" type="button" data-hystmodal="#make-partnership-modal">Запросить прайс-лист</button>

@@ -469,9 +469,11 @@
         <li class="m-help__grid-item help-item">
           <?php get_template_part('/template-parts/help-contents/help','care'); ?>
         </li>
+        <?php if(COMPANY_CATALOGS):?>
         <li class="m-help__grid-item help-item">
           <?php get_template_part('/template-parts/help-contents/help','downloads'); ?>
         </li>
+        <?php endif; ?>
       </ol>
     </div>
   </section>

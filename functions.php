@@ -4,9 +4,7 @@ define( 'THEME_PATH', get_template_directory_uri() );
 define( 'FILTER_HIDE', get_field('filter_hide', 'options') );
 define( 'LAYER_SHOW_ONLY_ONE', get_field('layer_show_only_one', 'options') );
 define( 'LAYER_SHOW_FIRST', get_field('layer_show_first', 'options') );
-define( 'CATALOG_MATTRESS_LINK', get_field('mattress_catalog_file', 'options') );
-define( 'CATALOG_FURNITURE_LINK', get_field('furniture_catalog_file', 'options') );
-define( 'CATALOG_FURNITURE_CAB_LINK', get_field('cab_catalog_file', 'options') );
+define( 'COMPANY_CATALOGS', get_field('company_catalogs', 'options') );
 define( 'ONLINE_STORE_LINK', get_field('online_store_link', 'options') );
 define( 'MAP_COORD', get_field('map_coord','options')? explode(', ', get_field('map_coord','options')) : array(53.129203, 46.565781) );
 define( 'USER_SETTINGS', array(
