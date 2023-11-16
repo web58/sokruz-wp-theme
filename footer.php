@@ -17,7 +17,7 @@
               <p class="indent-reset footer-top__email"><?=get_email(get_field('main_email', 'options'));?></p>
             </li>
             <li>
-              <a class="footer-top__title-link" href="<?=ONLINE_STORE_LINK;?>" target="_blank" rel="nofollow noreferer noopener">Интернет-магазин</a>
+              <a class="footer-top__title-link is-hidden" href="<?=ONLINE_STORE_LINK;?>" target="_blank" rel="nofollow noreferer noopener">Интернет-магазин</a>
               <div class="footer-top__messangers">
                 <?php get_template_part('/template-parts/messengers'); ?>
               </div>
