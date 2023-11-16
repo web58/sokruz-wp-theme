@@ -202,21 +202,28 @@
       </div>
     </section>
   <?php endif; ?>
-<?php  ?>
+
+  <?php $customers_text = get_field('main_customers_text') ?>
+  <?php if ( $customers_text ): ?>
+  <?php $customers_cover_src = get_field('main_customers_cover') ? get_field('main_customers_cover') : THEME_PATH .'/img/decor-img.jpg'; ?>
   <section class="customers">
     <div class="container">
       <div class="decor-block">
-        <img class="decor-block__img" src="<?=THEME_PATH?>/img/decor-img.jpg" alt="" aria-hidden="true">
+        <img class="decor-block__img" src="<?=$customers_cover_src; ?>" alt="" aria-hidden="true">
         <div class="decor-block__content">
           <h2 class="indent-reset hd hd--h1 decor-block__title">Вы розничный покупатель?</h2>
           <div class="decor-block__text">
-            <p>Переходите в интернет-магазин Сокруз-Онлайн – там вы ознакомитесь с модельным рядом и сможете подобрать подходящую модель в свой интерьер.</p>
+            <?= $customers_text; ?>
           </div>
-          <a class="btn decor-block__link" href="<?=ONLINE_STORE_LINK;?>" target="_blank" rel="nofollow noreferer noopener">Перейти в магазин</a>
+          <?php $customers_link = get_field('main_customers_link'); ?>
+          <?php if($customers_link): ?>
+          <a class="btn decor-block__link" href="<?= $customers_link['url']; ?>" <?php if($customers_link['target'] === '_blank'): ?> target="_blank" rel="nofollow noreferer noopener"<?php endif; ?>><?= $customers_link['title']; ?></a>
+          <?php endif; ?>
         </div>
       </div>
     </div>
   </section>
+  <?php endif; ?>
 
   <?php $popular_products = get_field('popular_products'); ?>
   <?php $novelties_products = get_field('novelties_products'); ?>
