@@ -184,11 +184,11 @@
               <p class="indent-reset hd hd--h4">Низкая</p>
               <?php if ($group_one) : ?>
                 <ul class="list-reset">
-                  <?php foreach ($group_one as $item) ?>
+                  <?php foreach ($group_one as $item): ?>
                     <?php $current_id = $item['ID']; ?>
                     <?php $current_product = wc_get_product( $current_id ); ?>
                     <li><a href="<?=$current_product->get_permalink();?>"><?=$current_product->get_name();?></a></li>
-                  <?php  ?>
+                  <?php endforeach; ?>
                 </ul>
               <?php else : ?>
                 <div><p>Нет рекомендаций</p></div>
@@ -198,11 +198,11 @@
               <p class="indent-reset hd hd--h4">Ниже средней</p>
               <?php if ($group_two) : ?>
                 <ul class="list-reset">
-                  <?php foreach ($group_one as $item) ?>
+                  <?php foreach ($group_two as $item): ?>
                     <?php $current_id = $item['ID']; ?>
                     <?php $current_product = wc_get_product( $current_id ); ?>
                     <li><a href="<?=$current_product->get_permalink();?>"><?=$current_product->get_name();?></a></li>
-                  <?php  ?>
+                  <?php endforeach; ?>
                 </ul>
               <?php else : ?>
                 <div><p>Нет рекомендаций</p></div>
@@ -212,11 +212,11 @@
               <p class="indent-reset hd hd--h4">Средняя</p>
               <?php if ($group_three) : ?>
                 <ul class="list-reset">
-                  <?php foreach ($group_one as $item) ?>
+                  <?php foreach ($group_three as $item): ?>
                     <?php $current_id = $item['ID']; ?>
                     <?php $current_product = wc_get_product( $current_id ); ?>
                     <li><a href="<?=$current_product->get_permalink();?>"><?=$current_product->get_name();?></a></li>
-                  <?php  ?>
+                  <?php endforeach; ?>
                 </ul>
               <?php else : ?>
                 <div><p>Нет рекомендаций</p></div>
@@ -226,11 +226,11 @@
               <p class="indent-reset hd hd--h4">Выше средней</p>
               <?php if ($group_four) : ?>
                 <ul class="list-reset">
-                  <?php foreach ($group_one as $item) ?>
+                  <?php foreach ($group_four as $item): ?>
                     <?php $current_id = $item['ID']; ?>
                     <?php $current_product = wc_get_product( $current_id ); ?>
                     <li><a href="<?=$current_product->get_permalink();?>"><?=$current_product->get_name();?></a></li>
-                  <?php  ?>
+                  <?php endforeach; ?>
                 </ul>
               <?php else : ?>
                 <div><p>Нет рекомендаций</p></div>
@@ -240,11 +240,11 @@
               <p class="indent-reset hd hd--h4">Жесткая</p>
               <?php if ($group_five) : ?>
                 <ul class="list-reset">
-                  <?php foreach ($group_one as $item) ?>
+                  <?php foreach ($group_five as $item): ?>
                     <?php $current_id = $item['ID']; ?>
                     <?php $current_product = wc_get_product( $current_id ); ?>
                     <li><a href="<?=$current_product->get_permalink();?>"><?=$current_product->get_name();?></a></li>
-                  <?php  ?>
+                  <?php endforeach; ?>
                 </ul>
               <?php else : ?>
                 <div><p>Нет рекомендаций</p></div>
