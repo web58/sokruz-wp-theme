@@ -37,7 +37,7 @@
               <span>Скачать каталоги</span>
               <ul>
                 <?php foreach(COMPANY_CATALOGS as $catalog): if($catalog['title'] && $catalog['file']): ?>
-                <li><a href="<?= $catalog['file']; ?>" download><?= $catalog['title']; ?></a></li>
+                <li><a href="<?= $catalog['file']; ?>" download>Каталог «<?= $catalog['title']; ?>»</a></li>
                 <?php endif; endforeach; ?>
               </ul>
             </li>
