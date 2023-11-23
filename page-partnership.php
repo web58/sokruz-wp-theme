@@ -89,7 +89,8 @@
         </li>
         <?php endif; endforeach; endif; ?>
         <li class="partnership-info__item">
-          <img class="partnership-info__img" src="<?=THEME_PATH?>/img/partnership/call-price.jpg" alt="" aria-hidden="true">
+          <?php $price_cover_src = get_field('price_cover', 'options') ? get_field('price_cover', 'options') : THEME_PATH.'/img/partnership/call-price.jpg'; ?>
+          <img class="partnership-info__img" src="<?= $price_cover_src; ?>" alt="" aria-hidden="true">
           <button class="btn-reset hd hd--h3 partnership-info__link" type="button" data-hystmodal="#make-partnership-modal">Запросить прайс-лист</button>
         </li>
       </ul>
