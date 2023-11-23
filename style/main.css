@@ -4885,6 +4885,7 @@ input[type=checkbox].visually-hidden {
   }
   .materials-item__image {
     height: auto;
+    min-height: 210px;
 
     grid-column: 8/span 5;
     grid-row-start: 2;
